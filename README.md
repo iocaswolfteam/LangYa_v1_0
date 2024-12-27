@@ -12,7 +12,7 @@ The term *Langya* is taken from the [Ci Hai](https://en.wikipedia.org/wiki/Cihai
 
 | Release Version      | Model Weights | Training Data   | OSV |
 |----------------------|---------------|-----------------|-----------------|
-| Initial release v1.0  | [langya_v1.0 onnx weights](XXXXX) | ERA5, GLORY12 | Temperature, Salinity, Velocity-U, Velocity-V  | 
+| Initial release v1.0  | [pan.baidu](https://pan.baidu.com/s/1ySPiI6pzLYL2hUEzZbUAkg?pwd=znyc) | ERA5, GLORY12 | Temperature, Salinity, Velocity-U, Velocity-V  | 
 
 
 
