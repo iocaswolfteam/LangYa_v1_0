@@ -3,7 +3,7 @@
 
 This repository contains the code and mdoels used for "LangYa: Revolutionizing Cross-Spatiotemporal Ocean Forecasting" \[[preprint paper](https://arxiv.org/abs/2412.18097)\]
 
-The term *Langya* is taken from the [Ci Hai](https://en.wikipedia.org/wiki/Cihai) (Chinese Dictionary), and refers to treasures with fine textures, crystal-clear and translucent like jade. Historically, Langya Terrace, located to the south of the ancient Zhenkou Town, has served as an important center for observing celestial bodies, including the sun, moon, and stars, and is a key site related to the twenty-four solar terms. Our ocean large model is named "LangYa," which aligns perfectly with the mission it carries in the field of modern oceanography.
+The term *Langya* is taken from the [Ci Hai](https://en.wikipedia.org/wiki/Cihai) (Chinese Dictionary), and refers to treasures with fine textures, crystal-clear and translucent like jade. Historically, Langya Terrace, located to the south of the Guzhenkou Campus of the [IOCAS](http://english.qdio.cas.cn/), had served as an important center for observing celestial bodies, including the sun, moon, and stars, and is a key site related to the twenty-four solar terms. Our ocean large model is named "LangYa," which aligns perfectly with the mission it carries in the field of modern oceanography.
 
 ![pipelines](assets/langyav1-0_pipeline.png)
 
@@ -17,7 +17,7 @@ The term *Langya* is taken from the [Ci Hai](https://en.wikipedia.org/wiki/Cihai
 
 
 ## Updates
-- [2024/12/28] The launch event of LangYa v1.0 was successfully held at the Guzhenkou Campus of the Institute of Oceanology, Chinese Academy of Sciences, in Qingdao, China. ([Media News](XXXXX))
+- [2024/12/28] The launch event of LangYa v1.0 was successfully held at the Guzhenkou Campus of the Institute of Oceanology, Chinese Academy of Sciences (IOCAS), in Qingdao, China. ([Media News](XXXXX))
 
 
 ## References
