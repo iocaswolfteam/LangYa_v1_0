@@ -8,15 +8,37 @@ The term *Langya* is taken from the [Ci Hai](https://en.wikipedia.org/wiki/Cihai
 ![pipelines](assets/langyav1-0_pipeline.png)
 
 
+## Getting Started
+
+### 1. Environment Setup
+```shell
+conda env create -f environment.yml
+```
+
+### 2. Model Testing
+Our model training & testing is implemented using distributed computing with Slurm workload manager, utilizing 16 GPUs across 4 nodes (4 GPUs per node). You can customize the testing configuration by modifying the parameters in `submit_test.sh` according to your hardware setup.
+
+To start the testing process, simply run:
+```shell
+sbatch submit_test.sh
+```
+
+Note: Before testing, please download the model weights, and place them in the `weights` folder.
+```shell
+weights/
+    ├── langya_v1.tar
+```
+
 ## Version Notes
 
 | Release Version      | Model Weights | Training Data   | OSV |
 |----------------------|---------------|-----------------|-----------------|
-| Initial release v1.0  | [pan.baidu](https://pan.baidu.com/s/1ySPiI6pzLYL2hUEzZbUAkg?pwd=znyc) | ERA5, GLORY12 | Temperature, Salinity, Velocity-U, Velocity-V  | 
+| Initial release v1.0  | [pan.baidu](https://pan.baidu.com/s/1-Ap1ylJPtNCyaPYuiifgYA?pwd=wolf), [google drive](https://drive.google.com/drive/folders/1pQbK2L_uhumdzC4fPO5z3adlPlmZNcIw?usp=sharing) | ERA5, GLORY12 | Temperature, Salinity, Velocity-U, Velocity-V  | 
 
 
 
 ## Updates
+- [2025/03/31] LangYa Test Script and Dataset has been released.
 - [2024/12/28] The launch event of LangYa v1.0 was successfully held at the Guzhenkou Campus of the Institute of Oceanology, Chinese Academy of Sciences (IOCAS), in Qingdao, China. ([Media News](XXXXX))
 
 

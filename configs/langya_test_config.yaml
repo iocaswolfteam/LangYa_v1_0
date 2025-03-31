@@ -1,0 +1,82 @@
+full_field: &FULL_FIELD
+  # runtime parameters
+  distributed: True
+
+  # dataset parameters
+  num_data_workers: 3
+  
+  location_sst: '/public/home/yangnan/LangYa/data/npz_daily/npy_sst1/train'
+  location_atmosphere: '/public/home/yangnan/LangYa/data/npz_daily/npy_air1/train'
+  location_ocean: '/public/home/yangnan/LangYa/data/npz_daily/npy_ocean1/train'
+  location_precip: None
+
+  location_sst_valid: '/public/home/yangnan/LangYa/data/npz_daily/npy_sst1/validation'
+  location_atmosphere_valid: '/public/home/yangnan/LangYa/data/npz_daily/npy_air1/validation'
+  location_ocean_valid: '/public/home/yangnan/LangYa/data/npz_daily/npy_ocean1/validation'
+  location_precip_valid: None
+  
+  resolution_x: 4320
+  resolution_y: 2040
+
+  forecast_day: 1
+  n_history: 0            # how many previous timesteps to consider for data
+  n_history_air: 10       # how many previous timesteps to consider for atmospheric data
+
+  flag_single_across: True
+  max_random_step_training: 7 # control the forecast days, =7 means forecast 1-7 days randomly
+
+  ocean_in_channels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128]
+  ocean_out_channels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93,  94, 95, 96, 97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128]
+
+  sst_in_channels: [0, 1, 2, 3]
+  sst_out_channels: [0, 1, 2, 3]
+
+  atmosphere_in_channels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+  atmosphere_out_channels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+  
+  add_noise: !!bool False
+  roll: False
+  normalization: 'zscore'
+  orography: !!bool False
+  orography_path: None
+  
+  sst_global_means_path: '/public/home/yangnan/LangYa/data/sst_global_means.npy'
+  sst_global_stds_path:  '/public/home/yangnan/LangYa/data/sst_global_stds.npy'
+  sst_global_maxs_path: '/public/home/yangnan/LangYa/data/sst_global_maxs.npy'
+  sst_global_mins_path: '/public/home/yangnan/LangYa/data/sst_global_mins.npy'
+
+  ocean_global_means_path: '/public/home/yangnan/LangYa/data/ocean_global_means.npy'
+  ocean_global_stds_path:  '/public/home/yangnan/LangYa/data/ocean_global_stds.npy'
+  ocean_global_maxs_path: '/public/home/yangnan/LangYa/data/ocean_global_maxs.npy'
+  ocean_global_mins_path: '/public/home/yangnan/LangYa/data/ocean_global_mins.npy'
+
+  atmosphere_global_means_path: '/public/home/yangnan/LangYa/data/atmosphere_global_means.npy'
+  atmosphere_global_stds_path:  '/public/home/yangnan/LangYa/data/atmosphere_global_stds.npy'
+  atmosphere_global_maxs_path: '/public/home/yangnan/LangYa/data/atmosphere_global_maxs.npy'
+  atmosphere_global_mins_path: '/public/home/yangnan/LangYa/data/atmosphere_global_mins.npy'
+  
+  noise_std: 0
+  add_grid: False  
+
+all_model: &ALL_MODEL
+  model: 'langya'
+  N_in_channels: 149
+  N_out_channels: 133
+  img_size: [2040, 4320]
+  depths:  [1, 2, 2, 2, 1]
+  num_heads: [3, 6, 6, 6, 3]
+  embed_dim: 48
+  window_size: [5, 12]
+  ape: False
+  patch_norm: True
+  mlp_ratio: 4.
+  shift_size: [2, 6]
+  patch_size: 4
+  earth_specific_pos: True
+  use_cosine_attention: True
+  drop_rate: 0.
+  drop_path_rate: 0.1
+  norm_layer: nn.LayerNorm
+  use_time_embed: True
+  max_random_step_training: 7
+  use_checkerboard_optimization: True
