@@ -39,7 +39,7 @@ weights/
 
 ## Updates
 - [2025/03/31] LangYa Test Script and Dataset has been released.
-- [2024/12/28] The launch event of LangYa v1.0 was successfully held at the Guzhenkou Campus of the Institute of Oceanology, Chinese Academy of Sciences (IOCAS), in Qingdao, China. ([Media News](XXXXX))
+- [2024/12/28] The launch event of LangYa v1.0 was successfully held at the Guzhenkou Campus of the Institute of Oceanology, Chinese Academy of Sciences (IOCAS), in Qingdao, China. ([CCTV News](https://news.cctv.com/2024/12/28/ARTIuyjTWFts8GIqUbj3sMiF241228.shtml?spm=C94212.P4YnMod9m2uD.ENPMkWvfnaiV.36), [CAS News](https://www.cas.cn/cm/202501/t20250102_5044003.shtml), [China daily](https://www.chinadaily.com.cn/a/202412/30/WS67728b8ba310f1265a1d5b02.html))
 
 
 ## References
